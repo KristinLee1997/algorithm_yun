@@ -4,7 +4,7 @@ package com.kristin.first.chapter1;
  * @author 李航
  * @school 哈尔滨理工大学
  * @date 2018/1/27 16:36
- * @desc 1.折纸问题:输出结果是二叉树的中序遍历
+ * @desc 1.1折纸问题:输出结果是二叉树的中序遍历
  **/
 public class PaperFoldingProblem {
     public static void printAllfolds(int foldTimes) {

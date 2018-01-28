@@ -4,7 +4,7 @@ package com.kristin.first.chapter1;
  * @author 李航
  * @school 哈尔滨理工大学
  * @date 2018/1/27 16:54
- * @desc 转圈打印矩阵
+ * @desc 1.2转圈打印矩阵
  **/
 public class PrintMatrixCircle {
     public static void printMatrixCircle(int[][] matrix) {
@@ -36,6 +36,7 @@ public class PrintMatrixCircle {
         }
     }
 
+    //打印一圈元素
     private static void printCircle(int[][] matrix, int upR, int upC, int downR, int downC) {
         int col = upC;
         while (col != downC) {
