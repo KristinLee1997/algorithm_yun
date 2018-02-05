@@ -16,24 +16,23 @@ public class PrintMatrixCircle {
         int downR = matrix.length - 1;
         int downC = matrix[0].length - 1;
         while (upC <= downC && upR <= downR) {
-//            if (upC == downC) {
-//                for (int i = upR; i <= downR; i++) {
-//                    System.out.print(matrix[i][upC] + " ");
-//                }
-//            } else if (upR == downR) {
-//                for (int i = upC; i <= downC; i++) {
-//                    System.out.print(matrix[upR][upC] + " ");
-//                }
-//            } else {
-//                printCircle(matrix, upR, upC, downR, downC);
-//            }
-            /*我觉得不用加上面的代码,但是左神写了,应该是我哪个细节没考虑到吧,我再研究*/
-            printCircle(matrix, upR, upC, downR, downC);
+            if (upC == downC) {
+                for (int i = upR; i <= downR; i++) {
+                    System.out.print(matrix[i][upC] + " ");
+                }
+            } else if (upR == downR) {
+                for (int i = upC; i <= downC; i++) {
+                    System.out.print(matrix[upR][i] + " ");
+                }
+            } else {
+                printCircle(matrix, upR, upC, downR, downC);
+            }
             upC++;
             upR++;
             downC--;
             downR--;
         }
+        System.out.println();
     }
 
     //打印一圈元素
@@ -63,6 +62,12 @@ public class PrintMatrixCircle {
                 {13, 14, 15, 16}};
         int[][] matrix2 = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}};
         int[][] matrix3 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}, {17, 18, 19, 20}};
+        int[][] matrix4 = {{1, 2, 3, 4, 5}};
+        int[][] matrix5 = {{1}, {2}, {3}, {4}, {5}};
+        printMatrixCircle(matrix);
         printMatrixCircle(matrix2);
+        printMatrixCircle(matrix3);
+        printMatrixCircle(matrix4);
+        printMatrixCircle(matrix5);
     }
 }

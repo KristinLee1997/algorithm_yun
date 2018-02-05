@@ -9,8 +9,8 @@ import java.util.List;
  * @desc
  **/
 public class Node {
-    private int value;
-    private Node next;
+    public int value;
+    public Node next;
 
     public Node(int value) {
         this.value = value;
